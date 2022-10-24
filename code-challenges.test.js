@@ -21,18 +21,18 @@
 
 // a) Create a test with an expect statement using the variable provided.
 
-  // describe("sentenceIt", () => {
-  //   it("takes in an array of objects and returns an array with a sentence about each person with their name capitalized", () => {
-  //       const people = [
-  //         { name: "ford prefect", occupation: "a hitchhiker" },
-  //         { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
-  //         { name: "arthur dent", occupation: "a radio employee" }
-  //       ]
-  //         // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
+  describe("sentenceIt", () => {
+    it("takes in an array of objects and returns an array with a sentence about each person with their name capitalized", () => {
+        const people = [
+          { name: "ford prefect", occupation: "a hitchhiker" },
+          { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
+          { name: "arthur dent", occupation: "a radio employee" }
+        ]
+          // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
 
-  // expect(sentenceIt(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."])
-  //   })
-  // })
+  expect(sentenceIt(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."])
+    })
+  })
 
 //Ran $ yarn jest to ensure "red" test
 //Code fail-yay! 
@@ -41,9 +41,43 @@
 // b) Create the function that makes the test pass.
 
 //PsudoCode
+  //1 create a function (sentenceIt)
+  //2 takes in an array (one peramiter: arr)
+  //3 iterate over array (.map)
+    //4. takes each value (Object.value) 
 
 
+    //4 takes the values (object(values)) 
+    //5 inserts value of name into part of sentence, inserts value of occupation into sentence (string interpolation => ${}) & joins together (concat)
+  //6 pushes to arr ([...arr,arr])
+  //7 outputs string (return)
 
+
+  const people = [
+    { name: "ford prefect", occupation: "a hitchhiker" },
+    { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
+    { name: "arthur dent", occupation: "a radio employee" } ]
+
+const sentenceIt = (arr) => {
+    let temp=[]
+    let str = [ ]
+    arr.map ( (v) => {
+        fullname=[]
+        temp2 = Object.values(v).flat()        //takes outside of arr
+        temp2
+
+
+        
+        temp = [...temp, temp2]
+  
+    }
+
+    )
+    return temp
+}
+
+
+//This one broke my brain and I unfortunately have no idea where to go from here. I am eagerly looking forward to how classmates solve this one so I can go back and fill ti in! 
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.
 
